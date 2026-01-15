@@ -1,0 +1,3 @@
+[submodule "vit/vit-pytorch"]
+	path = vit/vit-pytorch
+	url = https://github.com/lucidrains/vit-pytorch
