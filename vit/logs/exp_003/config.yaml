@@ -1,0 +1,47 @@
+experiment:
+  name: vit_base_cifar10
+  seed: 42
+model:
+  img_size: 32
+  patch_size: 4
+  in_chans: 3
+  embed_dim: 256
+  depth: 6
+  num_heads: 8
+  num_classes: 10
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 0.0001
+  weight_decay: 0.05
+  num_workers: 2
+  print_freq: 100
+  save_freq: 5
+data:
+  dataset: CIFAR10
+  data_dir: ./data
+  normalize_mean:
+  - 0.4914
+  - 0.4822
+  - 0.4465
+  normalize_std:
+  - 0.2023
+  - 0.1994
+  - 0.201
+augmentation:
+  random_crop: true
+  crop_padding: 4
+  random_horizontal_flip: true
+optimizer:
+  type: AdamW
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1e-8
+scheduler:
+  type: CosineAnnealing
+  T_max: 10
+logging:
+  tensorboard: true
+  log_interval: 10
+  save_logs: true

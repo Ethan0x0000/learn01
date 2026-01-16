@@ -4,3 +4,4 @@ timm
 matplotlib
 numpy
 scikit-learn
+tensorboard

@@ -1,0 +1,11 @@
+Commit: 86728c3773190a05f37856453d60556551010d7c
+Branch: main
+
+Status:
+D vit/output/best_model.pth
+ D vit/output/training_summary.json
+ M vit/requirements.txt
+ M vit/train_vit.ipynb
+?? vit/configs/
+?? vit/logs/
+?? vit/runs/
